@@ -85,11 +85,11 @@
           "css": "never"
         }
       ],
-      "@typescript-eslint/no-unused-vars": ["warn"],
+      "@typescript-eslint/no-unused-vars": ["error"],
       "@typescript-eslint/explicit-module-boundary-types": "off", // module return type 명시 X
-      "no-console": "warn",
-      "no-debugger": "warn",
-      "no-unused-vars": "warn", // no-unused-vars : 변수 선언 후 반드시 사용 (interface 임시로 변수 선언하고플 때 해결책)
+      "no-console": "error",
+      "no-debugger": "error",
+      "no-unused-vars": "error", // no-unused-vars : 변수 선언 후 반드시 사용 (interface 임시로 변수 선언하고플 때 해결책)
       "no-param-reassign": ["error", { "props": false }],
       "no-unused-expressions" : [ // 사용 안하는 표현 (예외 제외 Error 표시)
         "error", {
