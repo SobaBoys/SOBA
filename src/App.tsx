@@ -1,8 +1,21 @@
+import { Routes, Route, useLocation } from 'react-router-dom';
+import axios from 'axios';
+
+import ErrorPage from '@/404';
+import MainPage from '@/Pages/Main';
+
+axios.defaults.withCredentials = true;
+
 function App() {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <span>Dev Calendar</span>
-    </div>
+    <>
+      <Routes location={location}>
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </>
   );
 }
 
